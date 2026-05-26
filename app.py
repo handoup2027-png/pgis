@@ -198,7 +198,7 @@ def build_map(df: pd.DataFrame) -> folium.Map:
         location = (df["위도"].mean(), df["경도"].mean())
         zoom_start = 13
 
-    map_obj = folium.Map(location=location, zoom_start=zoom_start, tiles="CartoDB positron")
+    map_obj = folium.Map(location=location, zoom_start=zoom_start, tiles="CartoDB dark_matter")
     cluster = MarkerCluster(name="목격 지점").add_to(map_obj)
 
     for _, row in df.iterrows():
